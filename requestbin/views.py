@@ -43,7 +43,8 @@ def bin(name):
         update_recent_bins(name)
         return render_template('bin.html',
             bin=bin,
-            base_url=request.scheme+'://'+request.host)
+            #base_url=request.scheme+'://'+request.host)
+            base_url='https://apite.st')
     else:
         db.create_request(bin, request)
         resp = make_response("ok\n")
