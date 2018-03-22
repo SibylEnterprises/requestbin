@@ -68,3 +68,16 @@ def stats():
     resp = make_response(json.dumps(stats), 200)
     resp.headers['Content-Type'] = 'application/json'
     return resp
+
+@app.after_request
+def add_header(response):
+    #response.cache_control.max_age = 0
+    #response.cache_control.no_cache = true
+    #response.cache_control.must_revalidate = true
+    #response.cache_control.no_store = true
+
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+
+    return response
