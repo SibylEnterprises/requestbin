@@ -47,7 +47,7 @@ def bin(name):
     else:
         db.create_request(bin, request)
         resp = make_response("ok\n")
-        resp.headers['Sponsored-By'] = "https://www.runscope.com"
+        resp.headers['Sponsored-By'] = "https://www.sakari.io"
         return resp
 
 
