@@ -10,7 +10,27 @@
     <link type="text/css" href="/static/css/prettify.css" rel="stylesheet" />
     <script type="text/javascript" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" src="/static/js/prettify.js"></script>
-    {% block head %}{% endblock %}
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-8211331179756957",
+          enable_page_level_ads: true
+        });
+      </script>
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98269218-2"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-98269218-2');
+      </script>
+
+
+      {% block head %}{% endblock %}
   </head>
   <body onload="prettyPrint()">
     
@@ -98,30 +118,6 @@
 
     {% block script %}
     {% endblock %}
-    
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-36620802-5', 'requestb.in');
-      ga('send', 'pageview');
-    </script>
-    <script type="text/javascript">
-      /* <![CDATA[ */
-      var google_conversion_id = 988378328;
-      var google_custom_params = window.google_tag_params;
-      var google_remarketing_only = true;
-      /* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-      <div style="display:inline;">
-      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/988378328/?value=0&amp;guid=ON&amp;script=0"/>
-      </div>
-    </noscript>
-    <img src="http://ads.perfectaudience.com/seg?add=994132&amp;t=2" width="1" height="1" border="0" />
   </body>
 </html>
