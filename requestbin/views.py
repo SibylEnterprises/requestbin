@@ -39,7 +39,7 @@ def bin(name):
         return "Not found\n", 404
     if request.query_string == 'inspect':
         if bin.private and session.get(bin.name) != bin.secret_key:
-            return "Private bin\n", 403
+            return "Private bin\n" + session.get(bin.name) + "\n" + bin.secret_key, 403
         update_recent_bins(name)
         return render_template('bin.html',
             bin=bin,
