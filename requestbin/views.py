@@ -44,7 +44,7 @@ def bin(name):
         return render_template('bin.html',
             bin=bin,
             #base_url=request.scheme+'://'+request.host)
-            base_url='https://apite.st')
+            base_url='https://requestbin.io')
     else:
         db.create_request(bin, request)
         resp = make_response("ok\n")
